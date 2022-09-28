@@ -1,5 +1,11 @@
 {
   "dependencies": {
+    "com.individualkex.wavetools": {
+      "version": "file:C:/Users/bland/Downloads/wavetoolkit-master/wavetoolkit-master",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.17.2",
       "depth": 0,
