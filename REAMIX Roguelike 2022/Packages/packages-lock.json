@@ -1,10 +1,11 @@
 {
   "dependencies": {
     "com.individualkex.wavetools": {
-      "version": "file:C:/Users/bland/Downloads/wavetoolkit-master/wavetoolkit-master",
+      "version": "https://github.com/IndividualKex/wavetoolkit.git",
       "depth": 0,
-      "source": "local",
-      "dependencies": {}
+      "source": "git",
+      "dependencies": {},
+      "hash": "51c7bd4ceb0df506d90bbc22a227c82dd4e4fc28"
     },
     "com.unity.collab-proxy": {
       "version": "1.17.2",
@@ -209,7 +210,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.management": {
-      "version": "4.2.0",
+      "version": "4.2.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
