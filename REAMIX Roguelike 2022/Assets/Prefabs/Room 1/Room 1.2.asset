@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba27562a2dcf27346b47d769e240fd08, type: 3}
-  m_Name: Vertical
+  m_Name: Room 1.2
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2983615849856459564, guid: 74baa652c2c1eb94cabc70f7aecbad17, type: 3}
+  prefab: {fileID: 5103078263089953467, guid: 34ea7a3dcac35614cadf62c33d01da77, type: 3}
   down:
     name: 
   left:
-    name: 1
+    name: 
   up:
     name: 
   right:
