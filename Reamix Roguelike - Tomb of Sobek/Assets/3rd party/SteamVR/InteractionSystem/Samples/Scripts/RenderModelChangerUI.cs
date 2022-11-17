@@ -16,7 +16,7 @@ namespace Valve.VR.InteractionSystem.Sample
         {
             base.Awake();
 
-            ui = this.GetComponentInParent<SkeletonUIOptions>();
+            //ui = this.GetComponentInParent<SkeletonUIOptions>();
         }
 
         protected override void OnButtonClick()
