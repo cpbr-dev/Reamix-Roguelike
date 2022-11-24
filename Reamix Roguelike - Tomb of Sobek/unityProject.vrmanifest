@@ -5,7 +5,7 @@
       "app_key": "application.generated.unity.reamixrogueliketombsofnekht.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "E:\\Reamix\\Reamix-Roguelike\\Reamix Roguelike - Tomb of Sobek\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "C:\\Users\\Maria_Pamda\\Documents\\GitHub\\Reamix-Roguelike\\Reamix Roguelike - Tomb of Sobek\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
           "name": "Reamix Roguelike - Tombs of Nekht [Testing]"
