@@ -1,0 +1,631 @@
+fileFormatVersion: 2
+guid: 6aeb501f0df78bd4d9d88f11a7a6562d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc8d23182a921442bd877df01c831c8
+      internalID: 1834694551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afffd82a9102fce46859e97d02b406c2
+      internalID: 1760664373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_2
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b116a8e3571b441a1b942de92413f6
+      internalID: 513866133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_3
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4802edd9a4fd794b9b5a2e1b91a1d23
+      internalID: -1259326541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9f1b662c931204592a454d27d9e800
+      internalID: 1627091509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4a40264df76d248a9f5ec40e6534ab
+      internalID: -156811930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_6
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f04b874713ac1a46ae0d6c6c4170f30
+      internalID: 2070534901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2205
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc608a47b3d3e8b499a043ccfbb26888
+      internalID: 1337499366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_8
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3636b008426fb479c1af343ac23457
+      internalID: 1623799809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2835
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220a35c08be29cc4d96d1dc32cbc5b70
+      internalID: 837227417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_10
+      rect:
+        serializedVersion: 2
+        x: 3150
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e22726766a858344bd23d3603fcf804
+      internalID: -721296938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_11
+      rect:
+        serializedVersion: 2
+        x: 3465
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d98768e753b1ff4fa5a0407169c7bfe
+      internalID: 624791400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_12
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b02d5cd846da949a20e578e9c4f14a
+      internalID: -890788721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_13
+      rect:
+        serializedVersion: 2
+        x: 4095
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af971e83e737db439d5a8597337567d
+      internalID: 576966038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_14
+      rect:
+        serializedVersion: 2
+        x: 4410
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450cf05fdf0ec524097b643a8a372160
+      internalID: 129248217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_15
+      rect:
+        serializedVersion: 2
+        x: 4725
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 728094b920f754e4d91449a94258d8ad
+      internalID: -1944342276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_16
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d52a2c39330a5d4c9c94d68d7edcd67
+      internalID: 2106049426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_17
+      rect:
+        serializedVersion: 2
+        x: 5355
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db55498446e9c0048bd8d7d5dd7c5090
+      internalID: 1073319344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_18
+      rect:
+        serializedVersion: 2
+        x: 5670
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e440ed99d47a9243bb293fdff10afb0
+      internalID: 889729806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_19
+      rect:
+        serializedVersion: 2
+        x: 5985
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba66441e12425a4184f386b0d6aac46
+      internalID: 579400566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_20
+      rect:
+        serializedVersion: 2
+        x: 6300
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0c04c59f75f524896b91e0de2f4c47
+      internalID: 217186634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: menu-papyrus-sheet_21
+      rect:
+        serializedVersion: 2
+        x: 6615
+        y: 0
+        width: 315
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c2305e5e7066dd45a1929a97a89f57d
+      internalID: 1983023533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: cec33f6349684a244bebe9783159afa5
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      menu-papyrus-sheet_1: 1760664373
+      menu-papyrus-sheet_13: 576966038
+      menu-papyrus-sheet_0: 1834694551
+      menu-papyrus-sheet_2: 513866133
+      menu-papyrus-sheet_9: 837227417
+      menu-papyrus-sheet_19: 579400566
+      menu-papyrus-sheet_18: 889729806
+      menu-papyrus-sheet_6: 2070534901
+      menu-papyrus-sheet_15: -1944342276
+      menu-papyrus-sheet_12: -890788721
+      menu-papyrus-sheet_5: -156811930
+      menu-papyrus-sheet_10: -721296938
+      menu-papyrus-sheet_21: 1983023533
+      menu-papyrus-sheet_11: 624791400
+      menu-papyrus-sheet_3: -1259326541
+      menu-papyrus-sheet_7: 1337499366
+      menu-papyrus-sheet_20: 217186634
+      menu-papyrus-sheet_8: 1623799809
+      menu-papyrus-sheet_17: 1073319344
+      menu-papyrus-sheet_14: 129248217
+      menu-papyrus-sheet_16: 2106049426
+      menu-papyrus-sheet_4: 1627091509
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
