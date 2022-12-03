@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4800757059315227644}
   - component: {fileID: 2988904166761579543}
   - component: {fileID: 7394430486135899279}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Weapon_Bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
