@@ -259,9 +259,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3634782ac9571f34ca5048254b935d4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bolt: {fileID: 3403106018970154116, guid: 7451159175c95524398126dc324011f3, type: 3}
+  arrowPrefab: {fileID: 7174130969016125919, guid: cee1b9bacf7808e42a0cdf6ccb991d7d, type: 3}
   spawnPoint: {fileID: 3539556761169795839}
-  fireSpeed: 20
+  firePower: 1
+  reloadTime: 2
 --- !u!1 &3539556760498773936
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,7 +318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3539556761169795832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.43, y: 0, z: 0.068}
+  m_LocalPosition: {x: -0.073, y: 0, z: 0.068}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
