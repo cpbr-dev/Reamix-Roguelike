@@ -8,7 +8,7 @@ using UnityEngine;
 public class BoltBehaviour : MonoBehaviour
 {
     private Rigidbody rb;
-
+    public LayerMask layer;
     [SerializeField] private float torque;
 
     private void Start()
@@ -18,7 +18,7 @@ public class BoltBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag("Environment"))
+        if (collision.gameObject.CompareTag("Enemy") || (layer.value & 1 << collision.gameObject.layer) > 0 )
         {
             rb.isKinematic = true;
             transform.parent = collision.transform;

@@ -47,12 +47,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_Colliders:
-  - {fileID: 2237868032212032492}
+  - {fileID: 4627083850824888138}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2147483648
   m_DistanceCalculationMode: 1
   m_SelectMode: 1
   m_CustomReticle: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 6788885514621383516}
   - component: {fileID: 998221976511258914}
   - component: {fileID: 2672062171418382862}
-  - component: {fileID: 2237868032212032492}
+  - component: {fileID: 4627083850824888138}
   m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
@@ -209,8 +209,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2237868032212032492
-CapsuleCollider:
+--- !u!65 &4627083850824888138
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -219,7 +219,6 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
