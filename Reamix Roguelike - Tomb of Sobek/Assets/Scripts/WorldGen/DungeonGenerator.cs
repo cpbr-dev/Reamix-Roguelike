@@ -17,6 +17,8 @@ public class DungeonGenerator : MonoBehaviour
 
     List<Cell> board;
 
+    private int selection;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,8 +48,10 @@ public class DungeonGenerator : MonoBehaviour
                             possibleRooms.Add(room);
                         }
                     }
-                   
-                    var newRoom = Instantiate(possibleRooms[Random.Range(0, possibleRooms.Count - 1)], new Vector3(i * offset.x, 0, -j * offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
+
+                    selection = Random.Range(0, possibleRooms.Count);
+                    Debug.Log("Num picked:" + selection);
+                    var newRoom = Instantiate(possibleRooms[selection], new Vector3(i * offset.x, 0, -j * offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
 
                 }
             }
