@@ -20,7 +20,7 @@ public class Weapon : MonoBehaviour
         lastShot = Time.time;
         Debug.Log("Firing bolt.");
         var currentArrow = Instantiate(arrowPrefab, transform.position, transform.rotation);
-        currentArrow.GetComponent<Rigidbody>().velocity =  - transform.right * firePower * 15;
+        currentArrow.GetComponent<Rigidbody>().velocity =  transform.right * firePower * 15;
         currentArrow = null;
         CrossbowShot?.Invoke();
     }
