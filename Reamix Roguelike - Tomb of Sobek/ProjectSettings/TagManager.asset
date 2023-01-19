@@ -19,8 +19,8 @@ TagManager:
   - Environment
   - Interactable
   - Projectile
-  - Marker
-  - 
+  - Body
+  - Grab
   - 
   - 
   - 
