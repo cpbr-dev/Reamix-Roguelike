@@ -260,32 +260,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6646078241417718505, guid: 4bfe780c32c572f42b31b80c22c9eced, type: 3}
   m_PrefabInstance: {fileID: 1913488757355942370}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &5076993427657256421
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095135853508852491}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 1, z: 15}
-  m_Center: {x: 0, y: 0.5, z: 0}
---- !u!65 &2532298106232199878
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5095135853508852491}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5, y: 1, z: 5}
-  m_Center: {x: 5, y: 0.5, z: 0}
 --- !u!65 &2019884152278181173
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -299,6 +273,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 1, z: 5}
   m_Center: {x: -5, y: 0.5, z: 0}
+--- !u!65 &2532298106232199878
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095135853508852491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1, z: 5}
+  m_Center: {x: 5, y: 0.5, z: 0}
+--- !u!65 &5076993427657256421
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5095135853508852491}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1, z: 15}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!4 &5095135853508852492 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6646078241417718510, guid: 4bfe780c32c572f42b31b80c22c9eced, type: 3}

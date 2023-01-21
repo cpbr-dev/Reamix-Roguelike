@@ -50,7 +50,7 @@ public class DungeonGenerator : MonoBehaviour
                     }
 
                     selection = Random.Range(0, possibleRooms.Count);
-                    Debug.Log("Num picked:" + selection);
+                    //Debug.Log("Num picked:" + selection);
                     var newRoom = Instantiate(possibleRooms[selection], new Vector3(i * offset.x, 0, -j * offset.y), Quaternion.identity, transform).GetComponent<RoomBehaviour>();
 
                 }
