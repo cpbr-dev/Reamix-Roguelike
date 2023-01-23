@@ -24,7 +24,8 @@ public class BoltBehaviour : MonoBehaviour
             transform.parent = collision.transform;
             gameObject.GetComponent<Collider>().enabled = false;
             /* If it's an enemy, drop its health */
-            Destroy(this, 8f);
+            Destroy(this, 5f);
         }
+        Destroy(this, 5f);
     }
 }

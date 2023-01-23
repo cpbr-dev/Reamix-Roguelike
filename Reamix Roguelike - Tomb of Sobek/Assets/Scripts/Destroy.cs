@@ -3,58 +3,62 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
-        public int cubesPerAxis = 8;
-        public float delay = 1f;
-        public float force = 300f;
-        public float radius = 2f;
+    [SerializeField] private int cubesPerAxis = 8;
+    [SerializeField] private float force = 300f;
+    [SerializeField] private float radius = 2f;
+    
+    void Start()
+    {
 
-        void Start()
-        {
-        
     }
 
     void Update()
     {
-     
+
         if (Input.GetKey(KeyCode.A))
         {
             Invoke("Main", 0f);
         }
-            
+
     }
 
 
-        void Main() {
-            for (int x = 0; x < cubesPerAxis; x++)
+
+    void Main()
+    {
+        for (int x = 0; x < cubesPerAxis; x++)
+        {
+            for (int y = 0; y < cubesPerAxis; y++)
             {
-                for (int y = 0; y < cubesPerAxis; y++)
+                for (int z = 0; z < cubesPerAxis; z++)
                 {
-                    for (int z = 0; z < cubesPerAxis; z++)
-                    {
-                        CreateCubes(new Vector3(x, y, z));
-                    }
+                    CreateCubes(new Vector3(x, y, z));
                 }
             }
+        }
         Destroy(gameObject);
     }
-        
-        void CreateCubes(Vector3 coordinates)
-        {
-            GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            Renderer rd = cube.GetComponent<Renderer>();
-            //rd.material.color = new Color(coordinates.x / cubesPerAxis, coordinates.y / cubesPerAxis, coordinates.z / cubesPerAxis);
-            rd.material = GetComponent<Renderer>().material;
-            cube.transform.localScale = transform.localScale / cubesPerAxis;
-            Vector3 firstCube = transform.position - transform.localScale / 2 +cube.transform.localScale /2;
-            cube.transform.position = firstCube + Vector3.Scale(coordinates, cube.transform.localScale);
-            Rigidbody rb = cube.AddComponent<Rigidbody>();
-            rb.AddExplosionForce(force, transform.position, radius);
-        }
 
+    void CreateCubes(Vector3 coordinates)
+    {
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        Renderer rd = cube.GetComponent<Renderer>();
+        //rd.material.color = new Color(coordinates.x / cubesPerAxis, coordinates.y / cubesPerAxis, coordinates.z / cubesPerAxis);
+        rd.material = GetComponent<Renderer>().material;
+        cube.transform.localScale = transform.localScale / cubesPerAxis;
+        Vector3 firstCube = transform.position - transform.localScale / 2 + cube.transform.localScale / 2;
+        cube.transform.position = firstCube + Vector3.Scale(coordinates, cube.transform.localScale);
+        Rigidbody rb = cube.AddComponent<Rigidbody>();
+        rb.AddExplosionForce(force, transform.position, radius);
+        var destroy_time = Random.Range(0.1f, 1.0f);
 
-
-
+        Destroy(cube, destroy_time);
     }
- 
+
+
+
+
+}
+
 
 
