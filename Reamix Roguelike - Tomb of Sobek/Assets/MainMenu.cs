@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public Canvas firstCanvas;
+    public Canvas secondCanvas;
+    public Canvas thirdCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,14 +19,28 @@ public class MainMenu : MonoBehaviour
     {
         
     }
+    public void SwitchCanvas1()
+    {
+        firstCanvas.gameObject.SetActive(false);
+        secondCanvas.gameObject.SetActive(true);
+        thirdCanvas.gameObject.SetActive(false);
+    }
+    public void SwitchCanvas2()
+    {
+        firstCanvas.gameObject.SetActive(false);
+        secondCanvas.gameObject.SetActive(false);
+        thirdCanvas.gameObject.SetActive(true);
+    }
 
     public void changeScene()
     {
-        SceneManager.LoadScene("World");
+        SceneManager.LoadScene("Room Creation");
     }
 
-    public void openSettings()
+    public void quitGame()
     {
-        // TODO
+        Application.Quit();
     }
+
+
 }
