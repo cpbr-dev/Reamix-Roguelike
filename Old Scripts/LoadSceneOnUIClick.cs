@@ -25,5 +25,5 @@ public class LoadSceneOnUIClick : UIElement
         {
             SceneManager.LoadScene("World");
         }
-}
+    }
 }
