@@ -14,8 +14,6 @@ public class LocomotionManager : MonoBehaviour
     {
         _teleportationProvider = GetComponent<TeleportationProvider>();
         _continuousMoveProvider = GetComponent<ContinuousMoveProviderBase>();
-        DisableTeleport();
-        EnableContinuous();
     }
 
     public void SwitchLocomotion(int locomotionValue)
