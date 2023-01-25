@@ -14,5 +14,6 @@ public class AttachSocketToPlayer : MonoBehaviour
 
     private void LateUpdate() {
         transform.position = Target.position + offset;
+        transform.rotation= Target.rotation;
     }
 }
