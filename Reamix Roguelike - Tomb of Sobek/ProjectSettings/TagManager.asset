@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Teleport
   - Marker
+  - Target
   layers:
   - Default
   - TransparentFX

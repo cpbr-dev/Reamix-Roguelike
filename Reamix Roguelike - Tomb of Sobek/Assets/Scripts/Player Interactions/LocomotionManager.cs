@@ -7,13 +7,13 @@ public class LocomotionManager : MonoBehaviour
 {
     public GameObject leftRayTeleport;
 
-    private TeleportationProvider _teleportationProvider;
-    private ContinuousMoveProviderBase _continuousMoveProvider;
+    private TeleportationProvider teleportationProvider;
+    private ContinuousMoveProviderBase continuousMoveProvider;
     // Start is called before the first frame update
     void Start()
     {
-        _teleportationProvider = GetComponent<TeleportationProvider>();
-        _continuousMoveProvider = GetComponent<ContinuousMoveProviderBase>();
+        teleportationProvider = GetComponent<TeleportationProvider>();
+        continuousMoveProvider = GetComponent<ContinuousMoveProviderBase>();
     }
 
     public void SwitchLocomotion(int locomotionValue)
@@ -33,22 +33,22 @@ public class LocomotionManager : MonoBehaviour
     private void DisableTeleport()
     {
         leftRayTeleport.SetActive(false);
-        _teleportationProvider.enabled = false;
+        teleportationProvider.enabled = false;
     }
 
     private void EnableTeleport()
     {
         leftRayTeleport.SetActive(true);
-        _teleportationProvider.enabled = true;
+        teleportationProvider.enabled = true;
     }
 
     private void DisableContinuous()
     {
-        _continuousMoveProvider.enabled = false;
+        continuousMoveProvider.enabled = false;
     }
 
     private void EnableContinuous()
     {
-        _continuousMoveProvider.enabled = true;
+        continuousMoveProvider.enabled = true;
     }
 }

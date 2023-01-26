@@ -231,6 +231,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2949879990327801628}
   - component: {fileID: 9029806026591865089}
+  - component: {fileID: 7524916233008568406}
+  - component: {fileID: 7947734832909687772}
+  - component: {fileID: 5090476961563041650}
   m_Layer: 8
   m_Name: Floors
   m_TagString: Teleport
@@ -346,6 +349,45 @@ MonoBehaviour:
   m_Teleporting:
     m_PersistentCalls:
       m_Calls: []
+--- !u!65 &7524916233008568406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2949879990327801631}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1, z: 5}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!65 &7947734832909687772
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2949879990327801631}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1, z: 5}
+  m_Center: {x: 5, y: 0.5, z: 0}
+--- !u!65 &5090476961563041650
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2949879990327801631}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 1, z: 5}
+  m_Center: {x: 0, y: 0.5, z: -5}
 --- !u!1 &2949879990521856375
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +826,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Carpet
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 51876129852276473, guid: 8570bfed11fac5b488dedf95f1cf6d9d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8570bfed11fac5b488dedf95f1cf6d9d, type: 3}
 --- !u!4 &2902667989154093244 stripped
 Transform:
@@ -846,7 +889,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 457915311264356102, guid: f65c11a595433254eacc500c57882534, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f65c11a595433254eacc500c57882534, type: 3}
 --- !u!4 &2729483845755511047 stripped
 Transform:
@@ -1436,7 +1480,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floor_Carpet
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 51876129852276473, guid: 8570bfed11fac5b488dedf95f1cf6d9d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8570bfed11fac5b488dedf95f1cf6d9d, type: 3}
 --- !u!4 &2902667989472903105 stripped
 Transform:

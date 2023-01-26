@@ -19,7 +19,7 @@ public class WristUI : MonoBehaviour
         _menu.performed -= ToggleMenu;
     }
 
-    public void ToggleMenu(InputAction.CallbackContext context)
+    private void ToggleMenu(InputAction.CallbackContext context)
     {
         _wristUICanvas.enabled = !_wristUICanvas.enabled;
     }
