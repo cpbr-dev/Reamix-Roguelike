@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class Destroy : MonoBehaviour
+public class DestroyObject : MonoBehaviour
 {
     [SerializeField] private int cubesPerAxis = 8;
     [SerializeField] private float force = 300f;
@@ -12,19 +12,8 @@ public class Destroy : MonoBehaviour
 
     }
 
-    void Update()
-    {
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            Invoke("Main", 0f);
-        }
-
-    }
-
-
-
-    void Main()
+    public void Main()
     {
         for (int x = 0; x < cubesPerAxis; x++)
         {
@@ -39,7 +28,7 @@ public class Destroy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void CreateCubes(Vector3 coordinates)
+    public void CreateCubes(Vector3 coordinates)
     {
         GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
         Renderer rd = cube.GetComponent<Renderer>();
