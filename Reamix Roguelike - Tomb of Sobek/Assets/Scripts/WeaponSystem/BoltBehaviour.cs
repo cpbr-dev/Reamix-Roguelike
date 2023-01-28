@@ -23,9 +23,9 @@ public class BoltBehaviour : MonoBehaviour
             rb.isKinematic = true;
             transform.parent = collision.transform;
             gameObject.GetComponent<Collider>().enabled = false;
-            var myScript = collision.gameObject.GetComponent<DestroyObject>();
+            var myScript = collision.gameObject.GetComponent<ObjectHpManager>();
             if (myScript != null ) {
-                myScript.Main();
+                myScript.DropHealth(1f);
             }
             Destroy(this); //Remove bolt now, object already disappeared
         } else {

@@ -9,11 +9,19 @@ public class LocomotionManager : MonoBehaviour
 
     private TeleportationProvider teleportationProvider;
     private ContinuousMoveProviderBase continuousMoveProvider;
+
+    private ContinuousTurnProviderBase continuousTurnProvider;
+    private SnapTurnProviderBase snapTurnProvider;
     // Start is called before the first frame update
     void Start()
     {
         teleportationProvider = GetComponent<TeleportationProvider>();
         continuousMoveProvider = GetComponent<ContinuousMoveProviderBase>();
+
+        snapTurnProvider= GetComponent<ActionBasedSnapTurnProvider>();
+        continuousTurnProvider = GetComponent<ActionBasedContinuousTurnProvider>();
+
+        leftRayTeleport.SetActive(false);
     }
 
     public void SwitchLocomotion(int locomotionValue)
@@ -27,6 +35,20 @@ public class LocomotionManager : MonoBehaviour
         {
             DisableContinuous();
             EnableTeleport();
+        }
+    }
+
+    public void SwitchTurn(int turnValue)
+    {
+        if (turnValue == 0)
+        {
+            DisableSnap();
+            EnableContinuousTurn();
+        }
+        else if (turnValue == 1)
+        {
+            DisableContinuousTurn();
+            EnableSnap();
         }
     }
 
@@ -50,5 +72,24 @@ public class LocomotionManager : MonoBehaviour
     private void EnableContinuous()
     {
         continuousMoveProvider.enabled = true;
+    }
+
+    private void DisableSnap()
+    {
+        snapTurnProvider.enabled = false;
+    }
+    private void EnableSnap()
+    {
+        snapTurnProvider.enabled = true;
+    }
+
+    private void DisableContinuousTurn()
+    {
+        continuousTurnProvider.enabled = false;
+    }
+
+    private void EnableContinuousTurn()
+    {
+        continuousTurnProvider.enabled = true;
     }
 }

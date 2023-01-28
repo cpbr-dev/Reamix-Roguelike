@@ -179,7 +179,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 8823799448118984313, guid: 2f1cb23706fa7314b9dfc15743766f34, type: 3}
   spawnPoint: {fileID: 7068985293459367576}
-  firePower: 1
+  firePower: 1.5
+  cooldown: 2
+  shoot_reload: {fileID: 8300000, guid: 219926eab069fb5479b43df526ba1de4, type: 3}
 --- !u!54 &7276683114501903510
 Rigidbody:
   m_ObjectHideFlags: 0

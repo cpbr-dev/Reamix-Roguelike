@@ -1,19 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-
-public class DestroyObject : MonoBehaviour
+public class ObjectHpManager : MonoBehaviour
 {
     [SerializeField] private int cubesPerAxis = 8;
     [SerializeField] private float force = 300f;
     [SerializeField] private float radius = 2f;
-    
+
+    [SerializeField] private float currHealth = 10f;
     void Start()
     {
 
     }
 
 
-    public void Main()
+    public void KillObject()
     {
         for (int x = 0; x < cubesPerAxis; x++)
         {
@@ -46,11 +48,11 @@ public class DestroyObject : MonoBehaviour
 
     public void DropHealth(float damage)
     {
-
+        currHealth -= damage;
+        Debug.Log("Damage received: " + damage);
+        Debug.Log("Current HP: " + currHealth);
+        if (currHealth <= 0) {
+            KillObject();
+        }
     }
-
-
 }
-
-
-
