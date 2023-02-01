@@ -6,8 +6,6 @@ public class DamageHealth : MonoBehaviour
 {
     public Sprite fullHeart, halfHeart, emptyHeart;
     Image heartImage;
- 
-    
 
     void Awake()
     {
@@ -38,6 +36,5 @@ public class DamageHealth : MonoBehaviour
         Full=2
 
     }
-
    
 }

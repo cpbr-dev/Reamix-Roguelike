@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public static event Action OnPlayerDeath;
     public float health, maxHealth;
 
-    private void start()
+    private void Start()
     {
         health = maxHealth;
 

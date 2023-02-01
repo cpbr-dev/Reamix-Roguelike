@@ -26,10 +26,11 @@ public class BoltBehaviour : MonoBehaviour
             var myScript = collision.gameObject.GetComponent<ObjectHpManager>();
             if (myScript != null ) {
                 myScript.DropHealth(1f);
+                Destroy(this, 2f);
             }
-            Destroy(this); //Remove bolt now, object already disappeared
+            Destroy(this.gameObject, 0.1f); //Remove bolt now, object already disappeared
         } else {
-            Destroy(this, 5f); // Remove bolt after 5s, let it stick
+            Destroy(this.gameObject, 5f); // Remove bolt after 5s if it doesn't collide
         }
     }
 }

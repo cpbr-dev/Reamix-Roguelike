@@ -129,5 +129,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layer:
     serializedVersion: 2
-    m_Bits: 1280
+    m_Bits: 33536
   torque: 1
