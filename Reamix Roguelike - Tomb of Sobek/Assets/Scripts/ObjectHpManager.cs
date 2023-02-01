@@ -5,10 +5,12 @@ using UnityEngine;
 public class ObjectHpManager : MonoBehaviour
 {
     DestroyManager destroyManager;
-    [SerializeField] private float currHealth = 10f;
+    public float currHealth;
+    [SerializeField] public float maxHealth = 10f;
 
     void Start()
     {
+        currHealth = maxHealth;
         destroyManager = GetComponent<DestroyManager>();
     }
 

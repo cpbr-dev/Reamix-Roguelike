@@ -7,6 +7,7 @@ public class DestroyManager : MonoBehaviour
     [SerializeField] private int cubesPerAxis = 8;
     [SerializeField] private float force = 300f;
     [SerializeField] private float radius = 2f;
+    public float currentHealth, maxHealth;
     public void KillObject()
     {
         for (int x = 0; x < cubesPerAxis; x++)
