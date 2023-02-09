@@ -12,14 +12,6 @@ public class DoorRemover : MonoBehaviour
         disableObject(this.gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (nearbyDoor == null && collision.gameObject.CompareTag("Door"))
-        { //Should only run once on startup
-            nearbyDoor = collision.gameObject;
-        }
-    }
-
     private void disableObject(GameObject door)
     {
         if (door != null)
@@ -27,4 +19,15 @@ public class DoorRemover : MonoBehaviour
             door.SetActive(false);
         }   
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Collision detected");
+        if ( collision.gameObject.CompareTag("Door") ){
+            nearbyDoor = collision.gameObject;
+            Debug.Log("Object linked : " + nearbyDoor.name);
+        }
+    }
+
+
 }
