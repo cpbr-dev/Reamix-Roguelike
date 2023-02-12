@@ -10,6 +10,7 @@ TagManager:
   - Marker
   - Target
   - Door
+  - Lights_out
   layers:
   - Default
   - TransparentFX
