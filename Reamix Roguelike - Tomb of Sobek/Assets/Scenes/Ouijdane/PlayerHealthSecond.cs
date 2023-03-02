@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealthSecond : MonoBehaviour
 {
 
-    public static PlayerHealth instance;
+    public static PlayerHealthSecond instance;
 
     public int maxHealth;
     int health;

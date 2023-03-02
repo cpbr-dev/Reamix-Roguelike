@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -278,7 +278,7 @@ Transform:
   m_Children:
   - {fileID: 1539577007}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &504398448
 MonoBehaviour:
@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f658f9858be473459a3e38ff1ab6e94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   maxHealth: 5
 --- !u!1 &567470077
 GameObject:
@@ -888,8 +889,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 504398449}
         m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
-        m_MethodName: UpgradeHealth
-        m_Mode: 1
+        m_MethodName: TakeDamage
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1107,7 +1108,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &992732607
 PrefabInstance:
@@ -1266,11 +1267,11 @@ MonoBehaviour:
       - m_Target: {fileID: 504398449}
         m_TargetAssemblyTypeName: PlayerHealth, Assembly-CSharp
         m_MethodName: TakeDamage
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1458,6 +1459,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4892514717154535540, guid: d9e1e271c1384334eabbbf507543d26e, type: 3}
   m_PrefabInstance: {fileID: 1476470801}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1285847390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5527437359008332116, guid: d9e1e271c1384334eabbbf507543d26e, type: 3}
+  m_PrefabInstance: {fileID: 1476470801}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1374034534
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,7 +2046,7 @@ Transform:
   - {fileID: 1178796972}
   - {fileID: 992732608}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1968845354
 GameObject:
@@ -2128,7 +2140,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &2001677986
 GameObject:
@@ -2444,7 +2456,7 @@ Transform:
   - {fileID: 1777805514}
   - {fileID: 1374034535}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2087230658
 Rigidbody:
@@ -2545,7 +2557,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heart: {fileID: 3096991011900519266, guid: d9e1e271c1384334eabbbf507543d26e, type: 3}
-  hearts: []
+  hearts:
+  - {fileID: 1285847390}
 --- !u!114 &2125905941
 MonoBehaviour:
   m_ObjectHideFlags: 0
