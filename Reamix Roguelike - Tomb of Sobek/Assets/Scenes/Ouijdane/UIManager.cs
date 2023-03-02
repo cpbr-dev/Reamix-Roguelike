@@ -2,23 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-
 public class UIManager : MonoBehaviour
 {
+
     public GameObject heart;
     public List<Image> hearts;
 
-   HealthPlayerP playerHealth;
+    PlayerHealth playerHealth;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = HealthPlayerP.instance;
+        playerHealth = PlayerHealth.instance;
         playerHealth.DamageTaken += UpdateHearts;
         playerHealth.HealthUpgraded += AddHearts;
-        for (int i = 0; i < playerHealth.Health; i++)
+        for (int i = 0; i < playerHealth.maxHealth; i++)
         {
             GameObject h = Instantiate(heart, this.transform);
             hearts.Add(h.GetComponent<Image>());
@@ -45,7 +44,7 @@ public class UIManager : MonoBehaviour
             Destroy(i.gameObject);
         }
         hearts.Clear();
-        for (int i = 0; i < playerHealth.Health; i++)
+        for (int i = 0; i < playerHealth.maxHealth; i++)
         {
             GameObject h = Instantiate(heart, this.transform);
             hearts.Add(h.GetComponent<Image>());

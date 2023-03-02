@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPlayerP : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
-    public static HealthPlayerP instance;
+
+    public static PlayerHealth instance;
 
     public int maxHealth;
     int health;
@@ -71,4 +72,5 @@ public class HealthPlayerP : MonoBehaviour
             HealthUpgraded();
         }
     }
+
 }
