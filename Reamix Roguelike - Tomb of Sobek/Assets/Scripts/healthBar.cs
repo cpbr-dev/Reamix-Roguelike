@@ -5,15 +5,15 @@ using UnityEngine;
 public class healthBar : MonoBehaviour
 {
     public GameObject heartPrefab;
-    public PlayerHealth playerHealth;
+    public PlayerHealthP playerHealth;
     List<DamageHealth> hearts = new List<DamageHealth>();
     private void OnEnable()
     {
-        PlayerHealth.OnPlayerDamaged += DrawHearts;
+        PlayerHealthP.OnPlayerDamaged += DrawHearts;
     }
     private void OnDisable()
     {
-        PlayerHealth.OnPlayerDamaged -= DrawHearts;
+        PlayerHealthP.OnPlayerDamaged -= DrawHearts;
     }
     public void Start()
     {
