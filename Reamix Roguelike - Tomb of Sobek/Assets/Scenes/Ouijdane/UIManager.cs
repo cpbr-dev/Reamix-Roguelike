@@ -8,13 +8,13 @@ public class UIManager : MonoBehaviour
     public GameObject heart;
     public List<Image> hearts;
 
-    PlayerHealth playerHealth;
+    PlayerHealthSecond playerHealth;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = PlayerHealth.instance;
+        playerHealth = PlayerHealthSecond.instance;
         playerHealth.DamageTaken += UpdateHearts;
         playerHealth.HealthUpgraded += AddHearts;
         for (int i = 0; i < playerHealth.maxHealth; i++)
