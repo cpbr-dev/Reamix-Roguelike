@@ -139,6 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6646078240645275624}
   - component: {fileID: 3321186040006583251}
+  - component: {fileID: 3602118354222176741}
   m_Layer: 8
   m_Name: Room_Template
   m_TagString: Environment
@@ -180,6 +181,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   status: 00000000
+--- !u!114 &3602118354222176741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646078240645275627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61393253d4eba3e469086d2611929ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints: []
+  mobPrefabFolder: 
+  respawnDelay: 2
 --- !u!1 &6646078240866821392
 GameObject:
   m_ObjectHideFlags: 0
