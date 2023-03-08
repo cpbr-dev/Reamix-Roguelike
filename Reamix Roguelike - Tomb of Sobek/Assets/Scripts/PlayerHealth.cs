@@ -2,13 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     public static event Action OnPlayerDamaged;
     public static event Action OnPlayerDeath;
-    public int health, maxHealth;
+    public float health, maxHealth;
 
     private void Start()
     {
@@ -16,9 +15,9 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    public void TakeDamage(int dmgAmount)
+    public void TakeDamage(float amount)
     {
-        health -= dmgAmount;
+        health -= amount;
         OnPlayerDamaged?.Invoke();
         if(health<=0)
         {

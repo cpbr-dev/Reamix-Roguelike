@@ -111,5 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f010e1399c4faf40a9c1a000fb32deb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currHealth: 1
-  maxHealth: 1
+  cubesPerAxis: 8
+  force: 300
+  radius: 2
+  currHealth: 3

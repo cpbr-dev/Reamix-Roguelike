@@ -7,6 +7,8 @@ public class PlayerHealthSecond : MonoBehaviour
 {
 
     public static PlayerHealthSecond instance;
+    public static event Action OnPlayerDamaged;
+    public static event Action OnPlayerDeath;
 
     public int maxHealth;
     int health;
@@ -47,6 +49,17 @@ public class PlayerHealthSecond : MonoBehaviour
         if (DamageTaken != null)
         {
             DamageTaken();
+        }
+    }
+    public void takeDamage(int amount)
+    {
+        health -= amount;
+        OnPlayerDamaged?.Invoke();
+        if (health <= 0)
+        {
+            health = 0;
+            Debug.Log("Youre dead");
+            OnPlayerDeath?.Invoke();
         }
     }
 
