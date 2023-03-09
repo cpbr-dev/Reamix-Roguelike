@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class CombatRoomManager : MonoBehaviour
 {
+
+    [SerializeField] private RoomManager roomMan;
+
+
     [SerializeField] private int mobQuantity;
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private string mobPrefabFolder; // Folder containing all mob prefabs
     [SerializeField] private float respawnDelay = 2f; // Delay in seconds before respawning a mob at the same spawn point
 
+    private int remainingMobs;
+
     private GameObject[] mobPrefabs; // Array of mob prefabs to spawn
     private Dictionary<Transform, GameObject> spawnedMobs = new Dictionary<Transform, GameObject>(); // Dictionary to keep track of spawned mobs at each spawn point
-
+    private bool roomEnd = false;
     private bool triggered = false;
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
+        Debug.Log("Trigger entered");
         if (triggered) return;
-        triggered = true;
-        StartCoroutine(SpawnMobs());
+
+        if (collision.gameObject.CompareTag("Player") ) {
+            triggered = true;
+            StartCoroutine(SpawnMobs());
+        }
     }
 
     private void Start()
@@ -27,6 +37,7 @@ public class CombatRoomManager : MonoBehaviour
 
     private void LoadMobPrefabs()
     {
+        Debug.Log("Loading mob prefabs");
         if (string.IsNullOrEmpty(mobPrefabFolder))
         {
             Debug.LogError("Mob prefab folder path not set!");
@@ -59,6 +70,8 @@ public class CombatRoomManager : MonoBehaviour
 
     private IEnumerator SpawnMobs()
     {
+        //Needs to be fixed to allow mobs to spawn in waves in the same room.
+        //Currently only spawns 1 mob for each spawn point then stops execution.
         foreach (Transform spawnPoint in spawnPoints)
         {
             if (spawnPoint == null)
@@ -93,6 +106,46 @@ public class CombatRoomManager : MonoBehaviour
             GameObject mob = Instantiate(mobPrefab, spawnPoint.position, Quaternion.identity);
             spawnedMobs[spawnPoint] = mob;
         }
+        Debug.Log("Ending room");
+        yield return roomEnd = true;
     }
 
+    private void detectMobsInside()
+    {
+
+        if ( roomEnd == false )
+        {
+            Debug.Log("Searching for mobs in room");
+            Collider[] hitColliders = Physics.OverlapBox(transform.position + new Vector3(0, 4, 0), new Vector3(13, 7, 13));
+            remainingMobs = 0;
+            for (int i = 0; i < hitColliders.Length; i++)
+            {
+                GameObject hitCollider = hitColliders[i].gameObject;
+                if (hitCollider.gameObject.CompareTag("Enemy"))
+                {
+                    remainingMobs += 1;
+                    
+                }
+            }
+            Debug.Log("There are " + remainingMobs + " Enemies left");
+            if (remainingMobs == 0 && roomEnd)
+            {
+                roomMan.GetComponent<RoomManager>().OpenDoors();
+            }
+        }
+    }
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(transform.position + new Vector3(0, 4, 0), new Vector3(13, 7, 13) );
+    }
+
+
+    private void Update()
+    {
+        if(triggered)
+        {
+            detectMobsInside();
+        }
+    }
 }

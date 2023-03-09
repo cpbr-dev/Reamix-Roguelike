@@ -431,6 +431,22 @@ PrefabInstance:
       propertyPath: status.Array.data[3]
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5874160142623566314, guid: 4bfe780c32c572f42b31b80c22c9eced, type: 3}
+      propertyPath: m_Size.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5874160142623566314, guid: 4bfe780c32c572f42b31b80c22c9eced, type: 3}
+      propertyPath: m_Size.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5874160142623566314, guid: 4bfe780c32c572f42b31b80c22c9eced, type: 3}
+      propertyPath: m_Size.z
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5874160142623566314, guid: 4bfe780c32c572f42b31b80c22c9eced, type: 3}
+      propertyPath: m_Center.y
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6646078240645275624, guid: 4bfe780c32c572f42b31b80c22c9eced, type: 3}
       propertyPath: m_RootOrder
       value: 0

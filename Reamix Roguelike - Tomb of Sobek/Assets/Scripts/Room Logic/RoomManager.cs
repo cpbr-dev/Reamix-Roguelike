@@ -22,16 +22,9 @@ public class RoomManager : MonoBehaviour
         }
     }
 
-    //Once conditions are met in a room, open the doors that are closed
-    //and the doors that are linked to it
-    void Update()
+    public void OpenDoors()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0)){
-            OpenDoors();
-        }
-    }
-    void OpenDoors()
-    {
+        Debug.Log("Opening doors.");
         foreach( GameObject door in doors) {
             door.GetComponent<DoorRemover>().RemoveDoors();
         }
