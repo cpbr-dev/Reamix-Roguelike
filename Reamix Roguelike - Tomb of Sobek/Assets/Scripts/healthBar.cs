@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class healthBar : MonoBehaviour
+/*public class healthBar : MonoBehaviour
 {
     public GameObject heartPrefab;
-    public PlayerHealthSecond playerHealth;
+    //public PlayerHealthSecond playerHealth;
     List<DamageHealth> hearts = new List<DamageHealth>();
     private void OnEnable()
     {
@@ -21,8 +21,8 @@ public class healthBar : MonoBehaviour
     }
     public void DrawHearts()
     {
-        ClearHearts();
-        float maxHealthRemainder = playerHealth.maxHealth % 2;
+        //ClearHearts();
+       /* float maxHealthRemainder = playerHealth.maxHealth % 2;
         int heartsTomake = (int)((playerHealth.maxHealth / 2) + maxHealthRemainder);
         for(int i=0;i<heartsTomake;i++)
         {
@@ -51,5 +51,5 @@ public class healthBar : MonoBehaviour
         }
         hearts = new List<DamageHealth>();
 
-    }
-}
+    }*/
+

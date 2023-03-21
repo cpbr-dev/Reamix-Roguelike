@@ -8,32 +8,33 @@ public class UIManager : MonoBehaviour
     public GameObject heart;
     public List<Image> hearts;
 
-    PlayerHealthSecond playerHealth;
+   // PlayerHealthSecond playerHealth;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        playerHealth = PlayerHealthSecond.instance;
-        playerHealth.DamageTaken += UpdateHearts;
-        playerHealth.HealthUpgraded += AddHearts;
-        for (int i = 0; i < playerHealth.maxHealth; i++)
+       // playerHealth = PlayerHealthSecond.instance;
+        //playerHealth.DamageTaken += UpdateHearts;
+        //playerHealth.HealthUpgraded += AddHearts;
+        /*for (int i = 0; i < //playerHealth.maxHealth; i++)
         {
             GameObject h = Instantiate(heart, this.transform);
             hearts.Add(h.GetComponent<Image>());
-        }
+        }*/
 
     }
 
     void UpdateHearts()
     {
-        int heartFill = playerHealth.Health;
+       // int heartFill = playerHealth.Health;
 
-        foreach (Image i in hearts)
+      /*  foreach (Image i in hearts)
         {
             i.fillAmount = heartFill;
             heartFill -= 1;
         }
+      */
 
     }
 
@@ -44,10 +45,11 @@ public class UIManager : MonoBehaviour
             Destroy(i.gameObject);
         }
         hearts.Clear();
-        for (int i = 0; i < playerHealth.maxHealth; i++)
+     /*   for (int i = 0; i < playerHealth.maxHealth; i++)
         {
             GameObject h = Instantiate(heart, this.transform);
             hearts.Add(h.GetComponent<Image>());
         }
+     */
     }
 }
