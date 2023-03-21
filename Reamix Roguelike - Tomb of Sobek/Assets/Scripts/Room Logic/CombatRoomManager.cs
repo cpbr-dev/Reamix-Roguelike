@@ -5,10 +5,8 @@ using UnityEngine;
 public class CombatRoomManager : MonoBehaviour
 {
 
-    [SerializeField] private RoomManager roomMan;
+    private RoomManager _roomMan;
 
-
-    [SerializeField] private int mobQuantity;
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private string mobPrefabFolder; // Folder containing all mob prefabs
     [SerializeField] private float respawnDelay = 2f; // Delay in seconds before respawning a mob at the same spawn point
@@ -19,22 +17,21 @@ public class CombatRoomManager : MonoBehaviour
     private Dictionary<Transform, GameObject> spawnedMobs = new Dictionary<Transform, GameObject>(); // Dictionary to keep track of spawned mobs at each spawn point
     private bool roomEnd = false;
     private bool triggered = false;
-    private void OnTriggerEnter(Collider collision)
-    {
-        Debug.Log("Trigger entered");
-        if (triggered) return;
 
-        if (collision.gameObject.CompareTag("Player") ) {
-            triggered = true;
-            StartCoroutine(SpawnMobs());
-        }
-    }
+    
 
     private void Start()
     {
+        _roomMan = GetComponent<RoomManager>();
         LoadMobPrefabs();
     }
 
+    public void StartRoom()
+    {
+        triggered = true;
+        StartCoroutine(SpawnMobs());
+    }
+    
     private void LoadMobPrefabs()
     {
         Debug.Log("Loading mob prefabs");
@@ -106,8 +103,6 @@ public class CombatRoomManager : MonoBehaviour
             GameObject mob = Instantiate(mobPrefab, spawnPoint.position, Quaternion.identity);
             spawnedMobs[spawnPoint] = mob;
         }
-        Debug.Log("Ending room");
-        yield return roomEnd = true;
     }
 
     private void detectMobsInside()
@@ -128,9 +123,10 @@ public class CombatRoomManager : MonoBehaviour
                 }
             }
             Debug.Log("There are " + remainingMobs + " Enemies left");
-            if (remainingMobs == 0 && roomEnd)
+            if (remainingMobs == 0)
             {
-                roomMan.GetComponent<RoomManager>().OpenDoors();
+                _roomMan.OpenDoors();
+                enabled = false;
             }
         }
     }
