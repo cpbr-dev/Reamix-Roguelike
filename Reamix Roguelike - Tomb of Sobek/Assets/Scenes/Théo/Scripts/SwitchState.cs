@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.Dependencies.NCalc;
@@ -6,30 +7,39 @@ using UnityEngine;
 
 public class SwitchState : MonoBehaviour
 {
-    public Color activate = new Color(215 / 255f, 54 / 255f, 54 / 255f, 255 / 255f);
-    public Color deactivate = new Color(54 / 255f, 54 / 255f, 215 / 255f, 255 / 255f);
+    [SerializeField] private Material activated;
+    [SerializeField] private Material deactivated;
     public bool clicked = false;
+    public bool tileState;
 
+    private MeshRenderer _tileRenderer;
     public void OnMouseDown()
     {
         clicked = true;
     }
 
+    private void Start()
+    {
+        _tileRenderer = GetComponent<MeshRenderer>();
+    }
 
     public void InitBlock(GameObject block)
     {
-        this.GetComponent<MeshRenderer>().material.SetColor("_Color", deactivate);
+        _tileRenderer.material = deactivated;
+        tileState = false;
     }
 
     public void Switch()
     {
-        if (this.GetComponent<MeshRenderer>().material.GetColor("_Color") == activate)
+        if (tileState)
         {
-            this.GetComponent<MeshRenderer>().material.SetColor("_Color", deactivate);
+            _tileRenderer.material = deactivated;
+            tileState = false;
         }
         else
         {
-            this.GetComponent<MeshRenderer>().material.SetColor("_Color", activate);
+            _tileRenderer.material = activated;
+            tileState = true;
         }
     }
 }
