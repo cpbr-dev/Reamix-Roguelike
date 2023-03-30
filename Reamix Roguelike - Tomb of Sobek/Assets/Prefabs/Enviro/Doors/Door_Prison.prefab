@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1346081449471884525}
   - component: {fileID: 817463328549496658}
   - component: {fileID: 3761242043135163066}
+  - component: {fileID: 8079097321543633503}
   m_Layer: 0
   m_Name: Door_Prison
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +100,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: c8d957f8a5a6d9d42bb82a3dddfabf1c, type: 3}
+--- !u!114 &8079097321543633503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3503584205228826648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d05c81a5d281c44b5bab24cd219d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorPos: {fileID: 2363634157478735570, guid: 872de962d9c13c640b52317276db7ad3, type: 3}
 --- !u!1 &8052335108332701542
 GameObject:
   m_ObjectHideFlags: 0
