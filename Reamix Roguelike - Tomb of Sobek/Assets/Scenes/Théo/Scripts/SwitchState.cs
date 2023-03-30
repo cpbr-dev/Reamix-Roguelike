@@ -12,15 +12,21 @@ public class SwitchState : MonoBehaviour
     public bool clicked = false;
     public bool tileState;
 
+    private float lastClicked;
+    private float tileCooldown = 1.0f;
+
     private MeshRenderer _tileRenderer;
-    public void OnMouseDown()
+    public void OnCollisionEnter(Collision collision)
     {
+        if (!collision.gameObject.CompareTag("Player") || lastClicked + tileCooldown < Time.time ) return;
         clicked = true;
+        lastClicked = Time.time;
     }
 
     private void Awake()
     {
         _tileRenderer = GetComponent<MeshRenderer>();
+        lastClicked = Time.time; //Tiles are interactable 1 second after start
     }
 
     public void InitBlock(GameObject block)
