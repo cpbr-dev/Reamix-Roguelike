@@ -6,11 +6,6 @@ public class DestroyObject : MonoBehaviour
     [SerializeField] private int cubesPerAxis = 8;
     [SerializeField] private float force = 300f;
     [SerializeField] private float radius = 2f;
-    
-    void Start()
-    {
-
-    }
 
 
     public void Main()
@@ -43,12 +38,6 @@ public class DestroyObject : MonoBehaviour
 
         Destroy(cube, destroy_time);
     }
-
-    public void DropHealth(float damage)
-    {
-
-    }
-
 
 }
 

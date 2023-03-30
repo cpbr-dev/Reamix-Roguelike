@@ -43,9 +43,10 @@ GameObject:
   - component: {fileID: 3025462612585277984}
   - component: {fileID: 6498353992891477899}
   - component: {fileID: 3547399256628241363}
+  - component: {fileID: 6256732826883108434}
   m_Layer: 0
   m_Name: Door_Wooden_Lock
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -130,3 +131,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: 54f44cbfc0480d648a435647391b535e, type: 3}
+--- !u!114 &6256732826883108434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6786568984583530721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d05c81a5d281c44b5bab24cd219d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorPos: {fileID: 2363634157478735570, guid: 872de962d9c13c640b52317276db7ad3, type: 3}
