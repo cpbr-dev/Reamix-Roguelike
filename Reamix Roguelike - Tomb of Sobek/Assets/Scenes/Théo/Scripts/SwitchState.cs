@@ -18,7 +18,7 @@ public class SwitchState : MonoBehaviour
         clicked = true;
     }
 
-    private void Start()
+    private void Awake()
     {
         _tileRenderer = GetComponent<MeshRenderer>();
     }
