@@ -22,11 +22,11 @@ public class LightsOut : MonoBehaviour
             var swState = b.GetComponent<SwitchState>();
             _blocks.Add(swState);
             _initTiles.Add(swState);
+            Debug.Log("swState:" + swState + "\n_blocks :" + _blocks + "\n_initTiles:" + _initTiles);
             swState.Switch();
         }
         InitGame();
     }
-
 
     private void Update()
     {

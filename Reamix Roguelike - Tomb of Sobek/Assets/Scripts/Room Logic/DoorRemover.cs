@@ -14,9 +14,9 @@ public class DoorRemover : MonoBehaviour
 
     public void RemoveDoors()
     {
-        Debug.Log("Disabling nearbyDoor.");
+        //Debug.Log("Disabling nearbyDoor.");
         disableObject(nearbyDoor);
-        Debug.Log("Disabling self.");
+        //Debug.Log("Disabling self.");
         disableObject(this.gameObject);
     }
 
@@ -27,18 +27,18 @@ public class DoorRemover : MonoBehaviour
             door.SetActive(false);
             return;
         }
-        Debug.Log("door is null, not disabling");
+        //Debug.Log("door is null, not disabling");
     }
 
     private void detectDoors()
     {
-        Debug.Log("Searching for doors");
+        //Debug.Log("Searching for doors");
         Collider[] hitColliders = Physics.OverlapSphere(doorPos.position, 1);
-        Debug.Log("Found " + hitColliders.Length + " objects nearby, checking for door tag");
+        //Debug.Log("Found " + hitColliders.Length + " objects nearby, checking for door tag");
         for (int i = 0; i < hitColliders.Length; i++){
             GameObject hitCollider = hitColliders[i].gameObject;
             if ( hitCollider.gameObject.CompareTag("Door") && (hitCollider.transform.position != transform.position) ) {
-                Debug.Log("Found the door, setting it to nearbyDoor");
+                //Debug.Log("Found the door, setting it to nearbyDoor");
                 nearbyDoor = hitCollider.gameObject;
             }
         }

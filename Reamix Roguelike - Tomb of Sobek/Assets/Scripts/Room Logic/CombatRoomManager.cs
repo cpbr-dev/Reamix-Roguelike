@@ -110,7 +110,7 @@ public class CombatRoomManager : MonoBehaviour
 
         if ( roomEnd == false )
         {
-            Debug.Log("Searching for mobs in room");
+            //Debug.Log("Searching for mobs in room");
             Collider[] hitColliders = Physics.OverlapBox(transform.position + new Vector3(0, 4, 0), new Vector3(13, 7, 13));
             remainingMobs = 0;
             for (int i = 0; i < hitColliders.Length; i++)
@@ -122,7 +122,7 @@ public class CombatRoomManager : MonoBehaviour
                     
                 }
             }
-            Debug.Log("There are " + remainingMobs + " Enemies left");
+            //Debug.Log("There are " + remainingMobs + " Enemies left");
             if (remainingMobs == 0)
             {
                 _roomMan.OpenDoors();
