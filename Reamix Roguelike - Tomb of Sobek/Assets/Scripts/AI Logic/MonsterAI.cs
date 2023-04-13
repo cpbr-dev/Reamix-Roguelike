@@ -40,7 +40,7 @@ public class MonsterAI : MonoBehaviour {
         _animator.SetTrigger(AttackHash);
         yield return new WaitForSeconds(1f);
         if (Vector3.Distance(transform.position, _player.transform.position) < attackDistance) {
-            _player.GetComponent<PlayerHealth>().TakeDamage(damage);
+            _player.GetComponent<HealthManager>().TakeDamage(damage);
         }
         _isAttacking = false;
     }
