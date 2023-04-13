@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FillStatusBar : MonoBehaviour
+public class EnemyHealthBar : MonoBehaviour
 {
-    public ObjectHpManager enemy;
+    public HealthManager enemy;
     public Image fillImage;
     private Slider slider;
     void Awake()
     {
         slider = GetComponent<Slider>();
-        enemy = GetComponentInParent<ObjectHpManager>();
+        enemy = GetComponentInParent<HealthManager>();
     }
 
     // Update is called once per frame
