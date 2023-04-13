@@ -25,35 +25,63 @@ public class moveThaBall : MonoBehaviour
 
  
 
-    public float speed = 10.0f; // Speed at which the ball will roll
-    private Rigidbody rb; // Reference to the ball's Rigidbody component
+    // public float speed = 10.0f; // Speed at which the ball will roll
+    // private Rigidbody rb; // Reference to the ball's Rigidbody component
+
+    // void Start()
+    // {
+    //     rb = GetComponent<Rigidbody>(); // Get the Rigidbody component from the ball
+    // }
+
+    // void FixedUpdate()
+    // {
+    //     // Get input from the arrow keys
+    //     float moveHorizontal = Input.GetAxis("Horizontal");
+    //     float moveVertical = Input.GetAxis("Vertical");
+
+    //     // Create a movement vector based on the arrow key inputs
+    //     Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
+    //     // Normalize the movement vector to ensure that diagonal movement isn't faster than horizontal/vertical movement
+    //     if (movement.magnitude > 1.0f)
+    //     {
+    //         movement.Normalize();
+    //     }
+
+    //     // Calculate the new position of the ball based on its current position and the movement vector
+    //     Vector3 newPosition = transform.position + movement * speed * Time.deltaTime;
+
+    //     // Move the ball to the new position
+    //     rb.MovePosition(newPosition);
+    // }
+
+
+
+
+
+    public class BallController : MonoBehaviour
+{
+    public float speed = 10f;
+
+    private Rigidbody rb;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>(); // Get the Rigidbody component from the ball
+        rb = GetComponent<Rigidbody>();
     }
 
     void FixedUpdate()
     {
-        // Get input from the arrow keys
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        // Create a movement vector based on the arrow key inputs
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        Vector3 movement = new Vector3(moveHorizontal, 0f, moveVertical);
 
-        // Normalize the movement vector to ensure that diagonal movement isn't faster than horizontal/vertical movement
-        if (movement.magnitude > 1.0f)
-        {
-            movement.Normalize();
-        }
-
-        // Calculate the new position of the ball based on its current position and the movement vector
-        Vector3 newPosition = transform.position + movement * speed * Time.deltaTime;
-
-        // Move the ball to the new position
-        rb.MovePosition(newPosition);
+        rb.AddForce(movement * speed);
+        
     }
+}
+
 }
 
 
