@@ -5,18 +5,18 @@ using UnityEngine.UI;
 
 public class HeartHealthBar : MonoBehaviour
 {
-    public static HeartHealthBar instance;
+    public static HeartHealthBar Instance;
 
     [SerializeField] GameObject heartContainerPrefab;
 
     [SerializeField] List<GameObject> heartContainers;
-    int totalHearts;
-    float currentHearts;
-    HeartContainer currentContainer;
+    int _totalHearts;
+    float _currentHearts;
+    HeartContainer _currentContainer;
 
     void Start()
     {
-        instance = this;
+        Instance = this;
         heartContainers = new List<GameObject>();
         
     }
@@ -30,70 +30,70 @@ public class HeartHealthBar : MonoBehaviour
             Destroy(transform.GetChild(i).gameObject);
         }
 
-        totalHearts = heartsIn;
-        currentHearts = (float)totalHearts;
+        _totalHearts = heartsIn;
+        _currentHearts = (float)_totalHearts;
         
-        for (int i = 0; i < totalHearts; i++)
+        for (int i = 0; i < _totalHearts; i++)
         {
             GameObject newHeart = Instantiate(heartContainerPrefab, transform);
             heartContainers.Add(newHeart);
-            if(currentContainer != null)
+            if(_currentContainer != null)
             {
-                currentContainer.next = newHeart.GetComponent<HeartContainer>();
+                _currentContainer.next = newHeart.GetComponent<HeartContainer>();
             }
-            currentContainer = newHeart.GetComponent<HeartContainer>();
+            _currentContainer = newHeart.GetComponent<HeartContainer>();
         }
-        currentContainer = heartContainers[0].GetComponent<HeartContainer>();
+        _currentContainer = heartContainers[0].GetComponent<HeartContainer>();
 
     }
 
     //HeartHealthBar.instance.SetCurrentHealth(valueIn);
     public void SetCurrentHealth(float health)
     {
-        currentHearts = health;
-        currentContainer.SetHeart(currentHearts);
+        _currentHearts = health;
+        _currentContainer.SetHeart(_currentHearts);
         
     }
 
     //HeartHealthBar.instance.AddHearts(valueIn);
     public void AddHearts(float healthUp)
     {
-        currentHearts += healthUp;
-        if(currentHearts > totalHearts)
+        _currentHearts += healthUp;
+        if(_currentHearts > _totalHearts)
         {
-            currentHearts = (float)totalHearts;
+            _currentHearts = (float)_totalHearts;
         }
-        currentContainer.SetHeart(currentHearts);
+        _currentContainer.SetHeart(_currentHearts);
     }
 
     //HeartHealthBar.instance.RemoveHearts(valueIn);
     public void RemoveHearts(float healthDown)
     {
-        currentHearts -= healthDown;
-        if(currentHearts < 0)
+        _currentHearts -= healthDown;
+        if(_currentHearts < 0)
         {
-            currentHearts = 0f;
+            _currentHearts = 0f;
         }
-        currentContainer.SetHeart(currentHearts);
+        _currentContainer.SetHeart(_currentHearts);
     }
 
     //HeartHealthBar.instance.AddContainer(valueIn);
     public void AddContainer()
     {
         GameObject newHeart = Instantiate(heartContainerPrefab, transform);
-        currentContainer = heartContainers[heartContainers.Count - 1].GetComponent<HeartContainer>();
+        _currentContainer = heartContainers[heartContainers.Count - 1].GetComponent<HeartContainer>();
         heartContainers.Add(newHeart);
         
 
-        if (currentContainer != null)
+        if (_currentContainer != null)
         {
-            currentContainer.next = newHeart.GetComponent<HeartContainer>();
+            _currentContainer.next = newHeart.GetComponent<HeartContainer>();
         }
     
-        currentContainer = heartContainers[0].GetComponent<HeartContainer>();
+        _currentContainer = heartContainers[0].GetComponent<HeartContainer>();
 
-        totalHearts++;
-        currentHearts = totalHearts;
-        SetCurrentHealth(currentHearts);
+        _totalHearts++;
+        _currentHearts = _totalHearts;
+        SetCurrentHealth(_currentHearts);
     }
 }

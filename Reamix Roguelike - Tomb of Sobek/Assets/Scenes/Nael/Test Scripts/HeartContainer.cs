@@ -6,14 +6,13 @@ using UnityEngine.UI;
 public class HeartContainer : MonoBehaviour
 {
     public HeartContainer next;
-    public HealthManager healthMan;
-    [Range(0, 1)] private float fill;
+    [Range(0, 1)] private float _fill;
 
     [SerializeField] Image fillImage;
     public void SetHeart(float count)
     {
-        fill = count;
-        fillImage.fillAmount = fill;
+        _fill = count;
+        fillImage.fillAmount = _fill;
         count--;
         if (next != null)
         {
