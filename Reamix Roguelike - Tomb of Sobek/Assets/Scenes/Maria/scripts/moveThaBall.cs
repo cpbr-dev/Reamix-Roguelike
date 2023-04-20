@@ -5,6 +5,8 @@ using UnityEngine;
 public class moveThaBall : MonoBehaviour
 {
 
+    
+
     //public float speed = 10.0f; // Speed at which the ball will roll
     //private Rigidbody rb; // Reference to the ball's Rigidbody component
 
@@ -30,7 +32,7 @@ public class moveThaBall : MonoBehaviour
 
     // void Start()
     // {
-    //     rb = GetComponent<Rigidbody>(); // Get the Rigidbody component from the ball
+   //     rb = GetComponent<Rigidbody>(); // Get the Rigidbody component from the ball
     // }
 
     // void FixedUpdate()

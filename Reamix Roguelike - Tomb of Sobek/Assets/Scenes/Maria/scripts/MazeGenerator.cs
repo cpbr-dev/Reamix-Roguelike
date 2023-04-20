@@ -8,15 +8,31 @@ public class MazeGenerator : MonoBehaviour
     [SerializeField] Vector2Int mazeSize;
     [SerializeField] float nodeSize;
 
+    GameObject ball;
+    float ballSpeed = 5f;
+
     private void Start()
     {
         GenerateMazeInstant(mazeSize);
         //StartCoroutine(GenerateMaze(mazeSize));
+        GameObject ball = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        ball.transform.position = new Vector3(0, 0, 0);
+        ball.AddComponent<Rigidbody>();
+        //add color and size to the ball
+        ball.GetComponent<Renderer>().material.color = Color.red;
+        ball.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        //add collider to the ball
+        ball.AddComponent<SphereCollider>();
+        ball.GetComponent<SphereCollider>().radius = 0.5f;
+        ball.GetComponent<SphereCollider>().isTrigger = true;
+        ball.AddComponent<moveThaBall>();
+
     }
 
     void GenerateMazeInstant(Vector2Int size)
     {
         List<MazeNode> nodes = new List<MazeNode>();
+
 
         // Create nodes
         for (int x = 0; x < size.x; x++)
@@ -241,4 +257,4 @@ public class MazeGenerator : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
-}
+}   
