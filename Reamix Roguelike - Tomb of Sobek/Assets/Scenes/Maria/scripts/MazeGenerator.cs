@@ -25,14 +25,12 @@ public class MazeGenerator : MonoBehaviour
         ball.AddComponent<SphereCollider>();
         ball.GetComponent<SphereCollider>().radius = 0.5f;
         ball.GetComponent<SphereCollider>().isTrigger = true;
-        ball.AddComponent<moveThaBall>();
-
+        ball.AddComponent<moveThaBall>(); 
     }
 
     void GenerateMazeInstant(Vector2Int size)
     {
         List<MazeNode> nodes = new List<MazeNode>();
-
 
         // Create nodes
         for (int x = 0; x < size.x; x++)
@@ -61,7 +59,7 @@ public class MazeGenerator : MonoBehaviour
             int currentNodeIndex = nodes.IndexOf(currentPath[currentPath.Count - 1]);
             int currentNodeX = currentNodeIndex / size.y;
             int currentNodeY = currentNodeIndex % size.y;
-
+            
             if (currentNodeX < size.x - 1)
             {
                 // Check node to the right of the current node
@@ -139,7 +137,12 @@ public class MazeGenerator : MonoBehaviour
                 currentPath[currentPath.Count - 1].SetState(NodeState.Completed);
                 currentPath.RemoveAt(currentPath.Count - 1);
             }
+            //    //give the ball the current node position
+            //ball.transform.position = new Vector3(currentNodeX - (size.x / 2f), 0, currentNodeY - (size.y / 2f));
+            // //color the last node of the list to green color
+         //currentPath[currentPath.Count - 1].GetComponent<Renderer>().material.color = Color.green;
         }
+     
     }
 
     IEnumerator GenerateMaze(Vector2Int size)
@@ -165,7 +168,6 @@ public class MazeGenerator : MonoBehaviour
         // Choose starting node
         currentPath.Add(nodes[Random.Range(0, nodes.Count)]);
         currentPath[0].SetState(NodeState.Current);
-
         while (completedNodes.Count < nodes.Count)
         {
             // Check nodes next to the current node
@@ -175,7 +177,7 @@ public class MazeGenerator : MonoBehaviour
             int currentNodeIndex = nodes.IndexOf(currentPath[currentPath.Count - 1]);
             int currentNodeX = currentNodeIndex / size.y;
             int currentNodeY = currentNodeIndex % size.y;
-
+            
             if (currentNodeX < size.x - 1)
             {
                 // Check node to the right of the current node
