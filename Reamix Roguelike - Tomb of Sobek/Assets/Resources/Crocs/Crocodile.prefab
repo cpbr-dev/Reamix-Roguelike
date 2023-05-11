@@ -115,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currHealth: 5
   maxHealth: 10
+  heartHealthBar: {fileID: 0}
 --- !u!114 &2983998747327963574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +141,7 @@ PrefabInstance:
     - target: {fileID: 1347062359431330733, guid: ff31253eb58646447b25aad656489a7f, type: 3}
       propertyPath: enemy
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2983998747327963575}
     - target: {fileID: 1347062360265801269, guid: ff31253eb58646447b25aad656489a7f, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
