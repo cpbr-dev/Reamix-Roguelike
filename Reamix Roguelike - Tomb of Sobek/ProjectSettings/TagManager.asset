@@ -12,6 +12,7 @@ TagManager:
   - Door
   - Lights_out
   - playerOuij
+  - ball
   layers:
   - Default
   - TransparentFX

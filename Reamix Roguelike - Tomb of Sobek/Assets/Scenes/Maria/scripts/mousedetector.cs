@@ -6,7 +6,7 @@ public class mousedetector : MonoBehaviour
 {
     public GameObject arrowTarget; // The arrow target prefab
     private Rigidbody rb;
-    private float speed = 10f;
+    public float speed = 5f;
     GameObject ball;
 
 

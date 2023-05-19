@@ -7,13 +7,23 @@ public class MazeGenerator : MonoBehaviour
     [SerializeField] MazeNode nodePrefab;
     [SerializeField] Vector2Int mazeSize;
     [SerializeField] float nodeSize;
-    
+    [SerializeField] GameObject ballPrefab;
+
+
     float ballSpeed = 5f;
 
     private void Start()
     {
         GenerateMazeInstant(mazeSize);
-        
+        // Sélectionnez une position aléatoire dans le labyrinthe
+        Vector2Int ballPosition = new Vector2Int(Random.Range(0, mazeSize.x), Random.Range(0, mazeSize.y));
+
+        // Calculez la position réelle en fonction de la taille des nœuds et de la taille du labyrinthe
+        Vector3 ballSpawnPosition = new Vector3(ballPosition.x - (mazeSize.x / 2f), 0, ballPosition.y - (mazeSize.y / 2f));
+
+        // Instanciez la boule à la position aléatoire
+        Instantiate(ballPrefab, ballSpawnPosition, Quaternion.identity);
+
     }
 
     void GenerateMazeInstant(Vector2Int size)
@@ -47,7 +57,9 @@ public class MazeGenerator : MonoBehaviour
             int currentNodeIndex = nodes.IndexOf(currentPath[currentPath.Count - 1]);
             int currentNodeX = currentNodeIndex / size.y;
             int currentNodeY = currentNodeIndex % size.y;
-            
+
+            // Debug.Log(currentNodeX);
+            // Debug.Log(currentNodeY);
             if (currentNodeX < size.x - 1)
             {
                 // Check node to the right of the current node
@@ -128,9 +140,9 @@ public class MazeGenerator : MonoBehaviour
             //    //give the ball the current node position
             //ball.transform.position = new Vector3(currentNodeX - (size.x / 2f), 0, currentNodeY - (size.y / 2f));
             // //color the last node of the list to green color
-         //currentPath[currentPath.Count - 1].GetComponent<Renderer>().material.color = Color.green;
+            //currentPath[currentPath.Count - 1].GetComponent<Renderer>().material.color = Color.green;
         }
-     
+
     }
 
     IEnumerator GenerateMaze(Vector2Int size)
@@ -165,11 +177,11 @@ public class MazeGenerator : MonoBehaviour
             int currentNodeIndex = nodes.IndexOf(currentPath[currentPath.Count - 1]);
             int currentNodeX = currentNodeIndex / size.y;
             int currentNodeY = currentNodeIndex % size.y;
-            
+
             if (currentNodeX < size.x - 1)
             {
                 // Check node to the right of the current node
-                if (!completedNodes.Contains(nodes[currentNodeIndex + size.y]) && 
+                if (!completedNodes.Contains(nodes[currentNodeIndex + size.y]) &&
                     !currentPath.Contains(nodes[currentNodeIndex + size.y]))
                 {
                     possibleDirections.Add(1);
@@ -247,4 +259,4 @@ public class MazeGenerator : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
         }
     }
-}   
+}
